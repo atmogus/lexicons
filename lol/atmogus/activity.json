@@ -1,0 +1,24 @@
+{
+    "lexicon": 1,
+    "id": "lol.atmogus.activity.presences",
+    "defs": {
+        "main": {
+            "type": "record",
+            "description": "A record representing one or more application presence data.",
+            "key": "tid",
+            "record": {
+                "type": "object",
+                "required": [ "presences", "createdAt" ],
+                "properties": {
+                    "presences": {
+                        "type": "array",
+                        "items": { "type": "ref", "ref": "lol.atmogus.defs.activity#presence" },
+                        "minLength": 1,
+                        "maxLength": 500
+                    },
+                    "createdAt": { "type": "string", "format": "datetime" }
+                }
+            }
+        }
+    }
+}
