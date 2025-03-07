@@ -4,7 +4,7 @@
     "defs": {
         "main": {
             "type": "record",
-            "description": "A record representing one or more application presence data.",
+            "description": "A record representing an application's presence data.",
             "key": "tid",
             "record": {
                 "type": "object",
@@ -16,6 +16,7 @@
                         "minLength": 1,
                         "maxLength": 500
                     },
+                    "activityEndedAt": { "type": "string", "format": "datetime", "description": "Represents the end time for an activity." },
                     "createdAt": { "type": "string", "format": "datetime" }
                 }
             }
